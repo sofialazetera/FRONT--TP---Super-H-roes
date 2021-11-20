@@ -21,29 +21,35 @@ header .titulo{
     
 }
 main{
-    margin: 150px 20px;
-    text-align: center;
+    
+    
     font-family: Roboto, sans-serif;
 }
 section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+section article{
     background-color: #F3F3F3;
     font-family: Roboto, sans-serif;
-    display: inline-block;
     width: 300px;
-    margin: 0px 70px;
+    text-align: center;
+    margin: 100px 0px;
+    border-radius: 16px 16px 0 0;
+    text-align: center;
     position: relative;
 
 }
-section .corazon{
-    position: absolute;
-    right: 250px;
-    top: 10px;
-}
+
 section .heroe{
-    border-radius: 100%;
+    border-radius: 50%;
+    width: 125px;
     position: absolute;
+    right: calc(50% - (125px / 2)) ;
     top: 145px;
-    right: 30%;
+
 }
 
 section h3{
@@ -64,10 +70,77 @@ section button{
     width: 128.78px;
     height: 48.52px;
     margin-bottom: 30px;
+    border: none;
+}
+
+article .bg-headerCard{
+    padding: 10px;
+    width: 100%;
+    height: 194px;
+    border-radius: 16px 16px 0 0;
+    text-align: left;
+    
+}
+article .batman1{
+    background-image: url('../img/fondo-batman.png');
+    background-size: cover;
+}
+article .harley{
+    background-image: url('../img/fondo-harley.png');
+    background-size: cover;
+}
+
+article .bg-headerCard i{
+    color: red;
+    font-size: 2rem;
 }
 
 footer{
     background-color: #00669F;
     color: #FFF9F9    ;
     padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .espacio{
+    width: 10%;
+}
+footer img{
+    width: 100px;
+    
+}
+
+@media (max-width: 760px){
+    section article {
+        width: 45%;
+    }
+
+}
+@media (max-width: 400px){
+    section{
+        flex-direction: column;
+    }
+    section article{
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 400px;
+        margin: 10px auto;
+    }
+    footer .espacio{
+        width:0%;
+    }
+    footer img{
+        width: 50px;
+        margin: 16px 0px;
+    }
+    .oculta{
+        display: none;
+    }   
+    footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
